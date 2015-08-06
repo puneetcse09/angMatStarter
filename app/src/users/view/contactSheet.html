@@ -1,0 +1,28 @@
+<md-bottom-sheet class="md-list md-has-header">
+<div ng-controller="UserController">
+	<div class="col-md-12">
+		<div>
+			<h2 align="center">
+				{{userDetails.basicDetails.userName}}<br>
+			</h2>
+		</div>
+	</div>
+</div>
+<md-subheader> Contact <span class="name">{{
+	cp.user.name }}</span>: </md-subheader> <md-list> <md-item
+	ng-repeat="item in cp.actions"> <md-button
+	ng-click="cp.submitContact(item)" id="item_{{$index}}"> <md-icon
+	md-svg-icon="{{ item.icon_url }}"></md-icon> {{item.name}} </md-button> </md-item> </md-list> </md-bottom-sheet>
+<!--
+<div ng-controller="UserController">
+	<div class="col-md-12">
+		<div>
+			<h2 align="center">
+				{{userDetails.basicDetails.userName}}<br>
+			</h2>
+			<br />
+			<button class="btn btn-primary" ng-click="openTestLink()">Start Your Test</button>
+		</div>
+	</div>
+</div>
+ -->

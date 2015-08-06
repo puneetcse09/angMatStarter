@@ -1,0 +1,98 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<base href="/">
+<title>Welcome to App</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortlink" href="images/em1.png">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!-- build:css(app) styles/vendor.css -->
+<!-- bower:css -->
+<link rel="stylesheet"
+	href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<!-- endbower -->
+<!-- endbuild -->
+<!-- build:css({.tmp,app}) styles/main.css -->
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/styles/login.css">
+
+<!-- endbuild -->
+</head>
+<body style="overflow: hidden;">
+	<!-- <body> -->
+	<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+	<!-- Add your site or application content here -->
+	<div class="login-header" style="background-color: #438EA9">
+		<h4 align="left">&nbsp;&nbsp;&nbsp;&nbsp;Login</h4>
+	</div>
+	<div class="login">
+		<p class="alert alert-danger">Incorrect Email id/Password</p>
+		<form class="form-horizontal" role="form" method="post" name="loginPage"  id="loginPage"
+			action="/loginSubmit">
+			<div class="form-group">
+				<label for="inputEmail3" class="control-label">User ID</label></br> <input
+					type="text" class="form-control" id="inputEmail3" name="username"
+					placeholder="">
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="control-label">Password</label><br />
+				<input type="password" class="form-control" name="password"
+					id="inputPassword3" placeholder="">
+			</div>
+			<br />
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-lg">Sign
+					in</button>
+				<button type="submit" class="btn btn-danger btn-lg">Register
+				</button>
+			</div>
+		</form>
+	</div>
+	<div style="margin-top: 500px;"></div>
+<script>
+$(document).ready(function() {
+    $('#loginPage').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            email: {
+                validators: {
+                    emailAddress: {
+                        message: 'The value is not a valid email address'
+                    }
+                }
+            }
+        }
+    });
+});
+</script>
+	<!-- Footer Bar-->
+	<!--<div class="container" ng-include="'partials/main'" ng-controller="MainCtrl"></div>-->
+	<!-- scripts ----------------------------------------------------------------------------------------------------------------------- !>
+    <!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
+
+	<!-- build:js(app) scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<!-- endbuild -->
+</body>
+</html>

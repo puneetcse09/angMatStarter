@@ -1,0 +1,31 @@
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation"
+	style="margin-bottom: 0; background-color: #438EA8; background-color: #438EA8; background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url('images/bg02.png'); background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url('images/bg02.png'); background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url('images/bg02.png'); background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url('images/bg02.png'); background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url('images/bg02.png'); box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.15); text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);"
+	ng-controller="NavbarCtrl">
+
+	<div class="navbar-header">
+		<a class="btn" ng-click="openViewSchool()"> <img
+			src="images/yeoman.png"  height="33em" />&nbsp; <span
+			style="color: white; position: relative; font-size: 16px">Angular Test</span>
+		</a>
+	</div>
+	<button type="button" class="navbar-toggle" data-toggle="collapse"
+		data-target=".sidebar-collapse">
+		<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+		<span class="icon-bar"></span> <span class="icon-bar"></span>
+	</button>
+	<ul class="em-top-nav nav navbar-top-links navbar-right">
+		<a class="btn" href="index#/manage-users/user-profile"> <img
+			ng-if="userImage" src="{{userImage}}" style="height: 25px;" />&nbsp;
+			<i ng-if="!userImage" class="fa fa-user fa-fw"></i>
+		</a>
+		<li class="dropdown"><a class="dropdown-toggle"
+			data-toggle="dropdown" href="#"> <i class="fa fa-lock"></i> <i
+				class="fa fa-caret-down"></i>
+		</a>
+			<ul class="dropdown-menu dropdown-user">
+				<li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i>
+						Logout</a></li>
+			</ul> </li>
+		<li><img height="25%" width="25%" src="images/yeoman.png" /></li>
+	</ul>
+</nav>
